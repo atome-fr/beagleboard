@@ -1,0 +1,16 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "ti,am335x-bone-green", "ti,am335x-bone-black", "ti,am335x-bone", "ti,am33xx";
+
+    fragment@0 {
+        target = <&tscadc>;
+        __overlay__ {
+            status = "okay";
+            adc {
+                ti,adc-channels = <0 1 2 3 4 5 6>;
+            };
+        };
+    };
+};

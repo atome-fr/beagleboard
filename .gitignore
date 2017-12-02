@@ -1,3 +1,4 @@
 .bundle
 Gemfile.lock
+dts/*.dtbo
 spec/examples.txt

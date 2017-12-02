@@ -1,0 +1,9 @@
+.SUFFIXES:	.dts .dtbo
+
+all: am335x-beaglebone-tscadc.dtbo
+
+clean:
+	rm -f am335x-beaglebone-tscadc.dtbo
+
+.dts.dtbo:
+	dtc -I dts -O dtb -o ${.TARGET} ${.IMPSRC}
