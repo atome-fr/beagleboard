@@ -1,4 +1,4 @@
-require 'beaglebone/freebsd/gpio'
+require 'beagleboard/freebsd/gpio'
 
 RSpec.describe FreeBSD::Gpio do
   subject do

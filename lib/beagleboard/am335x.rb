@@ -1,7 +1,7 @@
 require 'ffi'
 
-require "beaglebone/#{FFI::Platform::OS}/adc"
-require "beaglebone/#{FFI::Platform::OS}/gpio"
+require "beagleboard/#{FFI::Platform::OS}/adc"
+require "beagleboard/#{FFI::Platform::OS}/gpio"
 
 class AM335x
   def initialize

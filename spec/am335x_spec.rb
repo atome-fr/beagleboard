@@ -1,4 +1,4 @@
-require 'beaglebone'
+require 'beagleboard/am335x'
 
 RSpec.describe AM335x do
   it { should respond_to(:ain0) }

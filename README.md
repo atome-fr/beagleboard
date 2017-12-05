@@ -1,11 +1,11 @@
-# beaglebone
+# beagleboard
 
 A Ruby gem to manipulate the BeagleBone and BeagleBone Black ADC and GPIOs
 
 ## usage
 
 ```ruby
-require 'beaglebone'
+require 'beagleboard'
 
 device = BeagleBoneBlack.new
 

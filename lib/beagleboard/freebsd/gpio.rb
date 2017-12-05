@@ -1,6 +1,6 @@
 require 'ffi'
 
-require 'beaglebone/base/gpio'
+require 'beagleboard/base/gpio'
 
 FFI.typedef(:uint32, :size_t)
 

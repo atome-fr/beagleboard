@@ -1,4 +1,4 @@
-require 'beaglebone/beaglebone'
+require 'beagleboard/beaglebone'
 
 class BeagleBoneBlack < BeagleBone
   [(3..6).to_a, (20..25).to_a].flatten.each do |pin|

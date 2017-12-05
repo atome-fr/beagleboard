@@ -1,2 +1,2 @@
-require 'beaglebone/beaglebone'
-require 'beaglebone/beagleboneblack'
+require 'beagleboard/beaglebone'
+require 'beagleboard/beagleboneblack'

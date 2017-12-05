@@ -1,4 +1,4 @@
-require 'beaglebone/base/adc'
+require 'beagleboard/base/adc'
 
 module Linux
   class Adc < Base::Adc

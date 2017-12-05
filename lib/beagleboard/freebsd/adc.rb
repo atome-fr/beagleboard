@@ -1,6 +1,6 @@
 require 'ffi'
 
-require 'beaglebone/base/adc'
+require 'beagleboard/base/adc'
 
 FFI.typedef(:uint32, :size_t)
 

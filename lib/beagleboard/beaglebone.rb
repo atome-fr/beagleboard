@@ -1,4 +1,4 @@
-require 'beaglebone/am335x'
+require 'beagleboard/am335x'
 
 class BeagleBone < AM335x
   {

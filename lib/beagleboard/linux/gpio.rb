@@ -1,4 +1,4 @@
-require 'beaglebone/base/gpio'
+require 'beagleboard/base/gpio'
 
 module Linux
   class Gpio < Base::Gpio

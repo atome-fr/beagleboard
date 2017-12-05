@@ -1,4 +1,4 @@
-require 'beaglebone/linux/gpio'
+require 'beagleboard/linux/gpio'
 
 RSpec.describe Linux::Gpio do
   subject do
