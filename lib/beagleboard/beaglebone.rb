@@ -4,6 +4,10 @@ module BeagleBoard
   class BeagleBone < AM335x
     {
       # P8
+      'p8_03' => 'gpio1_6',
+      'p8_04' => 'gpio1_7',
+      'p8_05' => 'gpio1_2',
+      'p8_06' => 'gpio1_3',
       'p8_07' => 'gpio2_2',
       'p8_08' => 'gpio2_3',
       'p8_09' => 'gpio2_5',
@@ -17,6 +21,12 @@ module BeagleBoard
       'p8_17' => 'gpio0_27',
       'p8_18' => 'gpio2_1',
       'p8_19' => 'gpio0_22',
+      'p8_20' => 'gpio1_31',
+      'p8_21' => 'gpio1_30',
+      'p8_22' => 'gpio1_5',
+      'p8_23' => 'gpio1_4',
+      'p8_24' => 'gpio1_1',
+      'p8_25' => 'gpio1_0',
       'p8_26' => 'gpio1_29',
       'p8_27' => 'gpio2_22',
       'p8_28' => 'gpio2_24',
@@ -33,6 +43,7 @@ module BeagleBoard
       'p8_42' => 'gpio2_11',
       'p8_43' => 'gpio2_8',
       'p8_44' => 'gpio2_9',
+      'p8_45' => 'gpio2_6',
       'p8_46' => 'gpio2_7',
 
       # P9
@@ -64,6 +75,7 @@ module BeagleBoard
       'p9_38' => 'ain3',
       'p9_39' => 'ain0',
       'p9_40' => 'ain1',
+      'p9_42' => 'gpio0_7',
 
       'usr0' => 'gpio1_21',
       'usr1' => 'gpio1_22',

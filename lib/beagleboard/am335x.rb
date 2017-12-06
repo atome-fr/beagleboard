@@ -53,7 +53,7 @@ module BeagleBoard
     end
 
     def valid_gpio_name(name)
-      return nil unless (captures = name.to_s.match(/\Agpio(\d)_([1-9][0-9]*)\z/))
+      return nil unless (captures = name.to_s.match(/\Agpio(\d)_(\d|[1-9]\d+)\z/))
       return nil unless (0..3).cover?(captures[1].to_i)
       return nil unless (0...32).cover?(captures[2].to_i)
       [captures[1].to_i, captures[2].to_i]
