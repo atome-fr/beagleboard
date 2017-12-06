@@ -20,25 +20,25 @@ module BeagleBoard
 
     def method_missing(name, *args)
       if valid_ain_name(name)
-        instance_variable_set("@#{name}", ain_factory(name))
-
-        define_singleton_method(name) do
-          instance_variable_get("@#{name}")
-        end
-        send(name)
+        attach_object(name, ain_factory(name))
       elsif valid_gpio_name(name)
-        instance_variable_set("@#{name}", gpio_factory(name))
-
-        define_singleton_method(name) do
-          instance_variable_get("@#{name}")
-        end
-        send(name)
+        attach_object(name, gpio_factory(name))
       else
         super
       end
     end
 
     private
+
+    def attach_object(name, obj)
+      instance_variable_set("@#{name}", obj)
+
+      define_singleton_method(name) do
+        instance_variable_get("@#{name}")
+      end
+
+      obj
+    end
 
     def valid_ain_name(name)
       return nil unless (captures = name.to_s.match(/\Aain(\d)\z/))
