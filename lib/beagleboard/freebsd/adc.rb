@@ -9,9 +9,9 @@ module BeagleBoard
     class Adc < BeagleBoard::Base::Adc
       extend FFI::Library
       ffi_lib 'c'
-      attach_function :sysctl, [:pointer, :uint, :pointer, :pointer, :pointer, :size_t], :int
-      attach_function :sysctlbyname, [:string, :pointer, :pointer, :pointer, :size_t], :int
-      attach_function :sysctlnametomib, [:string, :pointer, :pointer], :int
+      attach_function :sysctl, %i[pointer uint pointer pointer pointer size_t], :int
+      attach_function :sysctlbyname, %i[string pointer pointer pointer size_t], :int
+      attach_function :sysctlnametomib, %i[string pointer pointer], :int
 
       def self.enable(mib)
         buf = FFI::MemoryPointer.new(:int).write_int(1)

@@ -31,21 +31,21 @@ module BeagleBoard
       # gpio_pin_list
       # gpio_pin_config
       # gpio_pin_set_name
-      attach_function :gpio_pin_get, [:int, :uint32], :int
-      attach_function :gpio_pin_set, [:int, :uint32, :int], :int
-      attach_function :gpio_pin_toggle, [:int, :uint32], :int
-      attach_function :gpio_pin_low, [:int, :uint32], :int
-      attach_function :gpio_pin_high, [:int, :uint32], :int
-      attach_function :gpio_pin_input, [:int, :uint32], :int
-      attach_function :gpio_pin_output, [:int, :uint32], :int
-      attach_function :gpio_pin_opendrain, [:int, :uint32], :int
-      attach_function :gpio_pin_pushpull, [:int, :uint32], :int
-      attach_function :gpio_pin_tristate, [:int, :uint32], :int
-      attach_function :gpio_pin_pullup, [:int, :uint32], :int
-      attach_function :gpio_pin_pulldown, [:int, :uint32], :int
-      attach_function :gpio_pin_invin, [:int, :uint32], :int
-      attach_function :gpio_pin_invout, [:int, :uint32], :int
-      attach_function :gpio_pin_pulsate, [:int, :uint32], :int
+      attach_function :gpio_pin_get, %i[int uint32], :int
+      attach_function :gpio_pin_set, %i[int uint32 int], :int
+      attach_function :gpio_pin_toggle, %i[int uint32], :int
+      attach_function :gpio_pin_low, %i[int uint32], :int
+      attach_function :gpio_pin_high, %i[int uint32], :int
+      attach_function :gpio_pin_input, %i[int uint32], :int
+      attach_function :gpio_pin_output, %i[int uint32], :int
+      attach_function :gpio_pin_opendrain, %i[int uint32], :int
+      attach_function :gpio_pin_pushpull, %i[int uint32], :int
+      attach_function :gpio_pin_tristate, %i[int uint32], :int
+      attach_function :gpio_pin_pullup, %i[int uint32], :int
+      attach_function :gpio_pin_pulldown, %i[int uint32], :int
+      attach_function :gpio_pin_invin, %i[int uint32], :int
+      attach_function :gpio_pin_invout, %i[int uint32], :int
+      attach_function :gpio_pin_pulsate, %i[int uint32], :int
 
       def initialize(bank, gpio)
         super
