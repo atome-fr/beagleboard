@@ -1,9 +1,9 @@
 require 'beagleboard/freebsd/gpio'
 
-RSpec.describe FreeBSD::Gpio do
+RSpec.describe BeagleBoard::FreeBSD::Gpio do
   subject do
-    expect_any_instance_of(FreeBSD::Gpio).to receive(:gpio_open).with(1).and_return(9)
-    FreeBSD::Gpio.new(1, 23)
+    expect_any_instance_of(BeagleBoard::FreeBSD::Gpio).to receive(:gpio_open).with(1).and_return(9)
+    BeagleBoard::FreeBSD::Gpio.new(1, 23)
   end
 
   it 'has the expected FreeBSD GPIO call path' do

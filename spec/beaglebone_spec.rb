@@ -1,6 +1,6 @@
-require 'beaglebone'
+require 'beagleboard/beaglebone'
 
-RSpec.describe BeagleBone do
+RSpec.describe BeagleBoard::BeagleBone do
   it 'should provide wrappers' do
     expect(subject).to receive(:gpio1_22)
 

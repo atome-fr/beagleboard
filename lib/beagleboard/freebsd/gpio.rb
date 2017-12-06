@@ -2,10 +2,9 @@ require 'ffi'
 
 require 'beagleboard/base/gpio'
 
-FFI.typedef(:uint32, :size_t)
-
+module BeagleBoard
 module FreeBSD
-  class Gpio < Base::Gpio
+  class Gpio < BeagleBoard::Base::Gpio
     extend FFI::Library
 
     GPIO_PIN_LOW  = 0x00
@@ -113,4 +112,5 @@ module FreeBSD
       }[value]
     end
   end
+end
 end

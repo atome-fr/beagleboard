@@ -4,8 +4,9 @@ require 'beagleboard/base/adc'
 
 FFI.typedef(:uint32, :size_t)
 
+module BeagleBoard
 module FreeBSD
-  class Adc < Base::Adc
+  class Adc < BeagleBoard::Base::Adc
     extend FFI::Library
     ffi_lib 'c'
     attach_function :sysctl, [:pointer, :uint, :pointer, :pointer, :pointer, :size_t], :int
@@ -54,4 +55,5 @@ module FreeBSD
 
     attr_accessor :scale
   end
+end
 end

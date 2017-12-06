@@ -1,6 +1,6 @@
 require 'beagleboard/am335x'
 
-RSpec.describe AM335x do
+RSpec.describe BeagleBoard::AM335x do
   it { should respond_to(:ain0) }
   it { should respond_to(:ain1) }
   it { should respond_to(:ain2) }

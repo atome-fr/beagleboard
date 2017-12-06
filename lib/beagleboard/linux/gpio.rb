@@ -1,7 +1,8 @@
 require 'beagleboard/base/gpio'
 
+module BeagleBoard
 module Linux
-  class Gpio < Base::Gpio
+  class Gpio < BeagleBoard::Base::Gpio
     def initialize(bank, gpio)
       @gpio_number = bank * 32 + gpio
       @gpio_directory = "/sys/class/gpio/gpio#{@gpio_number}"
@@ -34,4 +35,5 @@ module Linux
       File.write("#{@gpio_directory}/value", value.to_s)
     end
   end
+end
 end

@@ -1,5 +1,6 @@
 require 'beagleboard/am335x'
 
+module BeagleBoard
 class BeagleBone < AM335x
   {
     # P8
@@ -73,4 +74,5 @@ class BeagleBone < AM335x
       send(function)
     end
   end
+end
 end

@@ -1,3 +1,4 @@
+module BeagleBoard
 module Base
   class Gpio
     def initialize(bank, gpio)
@@ -28,4 +29,5 @@ module Base
       raise StandardError, 'Not supported'
     end
   end
+end
 end

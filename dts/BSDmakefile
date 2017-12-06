@@ -1,6 +1,6 @@
 .SUFFIXES:	.dts .dtbo
 
-all: am335x-beaglebone-tscadc.dtbo
+all: am335x-beaglebone-tscadc.dtbo test.dtbo
 
 clean:
 	rm -f am335x-beaglebone-tscadc.dtbo

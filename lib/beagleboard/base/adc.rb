@@ -1,3 +1,4 @@
+module BeagleBoard
 module Base
   class Adc
     attr_accessor :scale
@@ -29,4 +30,5 @@ module Base
       end
     end
   end
+end
 end

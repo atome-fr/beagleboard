@@ -1,5 +1,6 @@
 require 'beagleboard/beaglebone'
 
+module BeagleBoard
 class BeagleBoneBlack < BeagleBone
   [(3..6).to_a, (20..25).to_a].flatten.each do |pin|
     define_method("p8_#{pin}") do
@@ -16,4 +17,5 @@ class BeagleBoneBlack < BeagleBone
       raise StandardError, 'Pin disabled (HDMI)'
     end
   end
+end
 end

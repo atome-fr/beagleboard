@@ -1,4 +1,11 @@
-.bundle
-Gemfile.lock
-dts/*.dtbo
-spec/examples.txt
+/.bundle/
+/.rspec_status
+/.yardoc
+/_yardoc/
+/Gemfile.lock
+/coverage/
+/doc/
+/dts/*.dtbo
+/pkg/
+/spec/reports/
+/tmp/

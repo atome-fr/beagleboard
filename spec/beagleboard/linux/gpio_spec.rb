@@ -1,8 +1,8 @@
 require 'beagleboard/linux/gpio'
 
-RSpec.describe Linux::Gpio do
+RSpec.describe BeagleBoard::Linux::Gpio do
   subject do
-    Linux::Gpio.new(1, 23)
+    BeagleBoard::Linux::Gpio.new(1, 23)
   end
 
   it 'has the expected Linux GPIO call path' do

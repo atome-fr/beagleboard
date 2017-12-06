@@ -3,6 +3,7 @@ require 'ffi'
 require "beagleboard/#{FFI::Platform::OS}/adc"
 require "beagleboard/#{FFI::Platform::OS}/gpio"
 
+module BeagleBoard
 class AM335x
   def initialize
     @plateform = case FFI::Platform::OS
@@ -48,7 +49,7 @@ class AM335x
   def ain_factory(name)
     ain = valid_ain_name(name)
 
-    Object.const_get("#{@plateform}::Adc").new(ain)
+    Object.const_get("BeagleBoard::#{@plateform}::Adc").new(ain)
   end
 
   def valid_gpio_name(name)
@@ -63,4 +64,5 @@ class AM335x
 
     Object.const_get("#{@plateform}::Gpio").new(bank, gpio)
   end
+end
 end
