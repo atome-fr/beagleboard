@@ -7,7 +7,7 @@ RSpec.describe BeagleBoard::FreeBSD::Gpio do
   end
 
   it 'has the expected FreeBSD GPIO call path' do
-    expect(subject).to receive(:gpio_pin_get).with(9, 23).and_return(1)
+    expect(subject.class).to receive(:gpio_pin_get).with(9, 23).and_return(1)
 
     expect(subject.value).to eq(1)
   end

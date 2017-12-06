@@ -76,12 +76,17 @@ module BeagleBoard
       end
 
       def value
-        send(:gpio_pin_get, @bank_fd, @gpio)
+        res = Gpio.gpio_pin_get(@bank_fd, @gpio)
+
+        raise 'Read error' if res < 0
+
+        res
       end
 
       def value=(value)
         return unless value
-        send(value_function(value), @bank_fd, @gpio)
+        res = send(value_function(value), @bank_fd, @gpio)
+        raise StandardError, 'Write error' if res < 0
       end
 
       private

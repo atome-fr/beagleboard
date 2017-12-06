@@ -15,18 +15,21 @@ module BeagleBoard
 
       def self.enable(mib)
         buf = FFI::MemoryPointer.new(:int).write_int(1)
-        sysctl(mib, 6, nil, nil, buf, buf.size)
+        res = sysctl(mib, 6, nil, nil, buf, buf.size)
+        raise StandardError, 'Write error' if res < 0
       end
 
       def self.disable(mib)
         buf = FFI::MemoryPointer.new(:int).write_int(0)
-        sysctl(mib, 6, nil, nil, buf, buf.size)
+        res = sysctl(mib, 6, nil, nil, buf, buf.size)
+        raise StandardError, 'Write error' if res < 0
       end
 
       def self.input(mib)
         buf = FFI::MemoryPointer.new(:int)
         bufsiz = FFI::MemoryPointer.new(:int).write_int(buf.size)
-        sysctl(mib, 6, buf, bufsiz, nil, 0)
+        res = sysctl(mib, 6, buf, bufsiz, nil, 0)
+        raise StandardError, 'Read error' if res < 0
         buf.read_int
       end
 
