@@ -1,8 +1,8 @@
 require 'beagleboard/base/adc'
 
-module BeagleBone
+module BeagleBoard
   module Linux
-    class Adc < BeagleBone::Base::Adc
+    class Adc < BeagleBoard::Base::Adc
       def initialize(ain)
         @ain_number = ain
 
