@@ -1,5 +1,7 @@
 # beagleboard
 
+[![Build Status](https://travis-ci.org/atome-fr/beagleboard.svg?branch=master)](https://travis-ci.org/atome-fr/beagleboard)
+
 A Ruby gem to manipulate the BeagleBone and BeagleBone Black ADC and GPIOs
 
 ## usage
