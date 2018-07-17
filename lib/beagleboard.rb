@@ -2,5 +2,5 @@ require 'beagleboard/beaglebone'
 require 'beagleboard/beagleboneblack'
 require 'beagleboard/version'
 
-module Beagleboard
+module BeagleBoard
 end

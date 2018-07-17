@@ -9,7 +9,7 @@ A Ruby gem to manipulate the BeagleBone and BeagleBone Black ADC and GPIOs
 ```ruby
 require 'beagleboard'
 
-device = BeagleBone::BeagleBoneBlack.new
+device = BeagleBoard::BeagleBoneBlack.new
 
 # ADCs access
 device.p9_39.scale = 100
