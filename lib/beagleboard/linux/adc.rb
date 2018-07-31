@@ -9,6 +9,8 @@ module BeagleBoard
         super
       end
 
+      def enabled?; end
+
       def enable; end
 
       def disable; end

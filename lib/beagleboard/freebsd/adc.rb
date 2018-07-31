@@ -13,6 +13,14 @@ module BeagleBoard
       attach_function :sysctlbyname, %i[string pointer pointer pointer size_t], :int
       attach_function :sysctlnametomib, %i[string pointer pointer], :int
 
+      def self.enabled?(mib)
+        buf = FFI::MemoryPointer.new(:int)
+        bufsiz = FFI::MemoryPointer.new(:int).write_int(buf.size)
+        res = sysctl(mib, 6, buf, bufsiz, nil, 0)
+        raise StandardError, 'Read error' if res < 0
+        buf.read_int == 1
+      end
+
       def self.enable(mib)
         buf = FFI::MemoryPointer.new(:int).write_int(1)
         res = sysctl(mib, 6, nil, nil, buf, buf.size)
@@ -42,6 +50,10 @@ module BeagleBoard
         Adc.sysctlnametomib("dev.ti_adc.0.ain.#{adc}.input", @input_mib, size)
 
         super
+      end
+
+      def enabled?
+        Adc.enabled?(@enable_mib)
       end
 
       def enable

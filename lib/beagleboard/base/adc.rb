@@ -6,7 +6,11 @@ module BeagleBoard
       def initialize(_adc, scale = 2**12)
         @scale = scale
 
-        enable
+        enable unless enabled?
+      end
+
+      def enabled?
+        raise StandardError, 'Not supported'
       end
 
       def enable
